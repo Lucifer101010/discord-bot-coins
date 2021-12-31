@@ -1,0 +1,10 @@
+CREATE TABLE `teams` (
+  `team_name` varchar(255) NOT NULL,
+  `team_id` int(11) NOT NULL,
+  `team_chief_id` varchar(255) NOT NULL,
+  `team_members` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_bin NOT NULL CHECK (json_valid(`team_members`)),
+  `team_experience` float(50,30) NOT NULL DEFAULT 0.000000000000000000000000000000,
+  `team_role_id` varchar(255) DEFAULT NULL,
+  `team_voice_id` varchar(255) DEFAULT NULL,
+  `team_text_id` varchar(255) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
